@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+html {
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", arial;
+}
+
+.top-header {
+    text-align: center;
+}
+
+/* ao colocar a classe da tag header como text-align center a imagem vai para o centro pois é um elemento INLINE, portanto, se comporta como texto, porem é necessario adicionar no elemento pai da tag IMG */
+
+.top-header-logo {
+    margin: .5em;
+
+}
+
+.top-nav {
+    background-color: #612674;
+    text-align: center;
+
+}
+
+.top-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+
+}
+
+.top-nav a:hover {
+    background-color: #7c3792;
+
+}
+
+/*------------------------------------------------*/
+
+
+.top-content {
+    padding: 1em;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+
+.top-content-title {
+    color: #612674;
+    font-size: 1.375em;
+    margin: 1.375em;
+}
+
+.top-content-subtitle {
+    color: #a87bb7;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/*---------------- classes genericas--------------------------------*/
+
+.button {
+    display: inline-block;
+    padding: .9em 2.5em;
+    background-color: #58c4c4;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #37a0a0;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* classe será utilizada toda vez em que o container pai parar de enxergar a tag filho por conta do float*/
+
+/*------------------------------------------------*/
+
+
+.middle-content {
+    padding: 2em;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+
+.middle-content-title {
+    font-size: 1.25em;
+    color: #652e79;
+    text-transform: uppercase;
+}
+
+.middle-content p {
+    line-height: 1.5;
+    color: #222;
+}
+
+.middle-content span[class^=icon] {
+    font-size: 4em;
+    color: #652e79;
+}
+
+/* este atributo seleciona dentro da classe middle-content , uma tag span que tenha uma classe, que começa ( ^= icon ) com icon */
+
+
+
+/*------------------------------------------*/
+
+
+.main-content {
+    padding: 2em;
+}
+
+.main-content p {
+    line-height: 1.5
+}
+
+.main-content-article {
+    margin-bottom: 3.5em;
+}
+
+.main-content-title {
+    color: #652e78;
+    font-size: 1.25em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+
+/*-------------------------------------------------*/
+
+
+.hidden {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+}
+
+.footer {
+    background-color: #25303e;
+    color: #83969f;
+    text-align: center;
+    padding-bottom: 2em
+}
+
+.footer-menushare {
+    background-color: #303d4c;
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+
+}
+
+.footer-menushare li {
+
+    margin: 0 1em;
+    height: 1.5em;
+}
+
+.footer-menushare a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+/*-----------------MEDIA QUERIES ---------------*/
+
+/* será utilizado essa media após termos uma tela com no minimo 780px */
+@media screen and (min-width:48.75em) {
+
+    .top-header-logo {
+        float: left;
+    }
+
+    .top-nav {
+        background-color: transparent;
+        float: right;
+        margin-top: 1.8em;
+    }
+
+    .top-nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .top-nav li {
+        display: inline-block;
+    }
+
+    .top-nav a {
+        color: #713a84;
+    }
+    .top-nav a:hover{
+        background-color: #e7d9fc;
+    }
+
+    .top-content {
+        background-color: #521a66;
+        color: white;
+    }
+
+    .top-content-title,
+    .top-content-subtitle {
+        color: white;
+
+    }
+
+}
