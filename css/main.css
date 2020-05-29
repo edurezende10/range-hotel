@@ -51,6 +51,15 @@ h6 {
 
 /*------------------------------------------------*/
 
+.icon-play{
+    display: none;
+    height: 5em;
+    
+}
+.icon-play img {
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .top-content {
     padding: 1em;
@@ -85,7 +94,8 @@ h6 {
     background-color: #37a0a0;
 }
 
-.clearfix:after {
+.clearfix:after,
+.row:after {
     content: " ";
     display: block;
     clear: both;
@@ -215,7 +225,8 @@ h6 {
     .top-nav a {
         color: #713a84;
     }
-    .top-nav a:hover{
+
+    .top-nav a:hover {
         background-color: #e7d9fc;
     }
 
@@ -230,4 +241,62 @@ h6 {
 
     }
 
+    /*------------------topcontent-------------------*/
+
+    .col-1_4 {
+        width: 44%;
+        margin: 3%;
+        float: left;
+    }
+     .icon-play {
+        display:block;
+    }
+
+    /*------------------maincontent-----------------*/
+
+    .main-content-article .button {
+        float: right;
+    }
+}
+
+/*-- 1000 pixels---*/
+@media screen and (min-width:62.5em) {
+    /* --------- TOPCONTENT ----------*/
+    .top-content{
+         background-color: #521a66;
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        background-position:bottom:;
+        height: 30em;
+        padding-top: 10em;
+        box-sizing: border-box;
+    }
+}
+
+/*------ 1184p pixels ----*/
+@media screen and (min-width:74em){
+    .top-content {
+         background-image: url(../images/bg_topo_1600x1374.jpg);
+        background-position: center top;
+        height: 100vh;
+        padding:19em 10em;
+    }
+    .icon-play{
+        height: 7em;
+    }
+    
+    /*------- colunas -----------*/
+    .col-1_4{
+        width: 23%;
+        margin: 1%;
+    }
+    
+    .col-1_2{
+        width: 48%;
+        margin: 1%;
+        float:left;
+    }
+    .main-content-article .button {
+        float: none;
+    }
+   
 }
